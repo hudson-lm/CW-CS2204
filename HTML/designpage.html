@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Hudson Lois">
+        <meta name="description" content="CW-1 CS2204">
+        <title>Design Page</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/design.css" media="screen">
+
+    </head>
+    <body>
+        <header>
+            <img src="../image/logo.png" alt="logo.png" width="334" height="100">
+            <h1>Visionary Innovation Hub</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li id="home"><a href="homepage.html">Home</a></li>
+                <li id="about"><a href="aboutpage.html">About</a></li>
+                <li id="apply"><a href="applypage.html">Apply</a></li>
+                <li id="visit"><a href="visitpage.html">Visit</a></li>
+                <li id="program"><a href="informationpage.html">Information</a></li>
+                <li id="contact"><a href="contactpage.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="the-credit-block">
+            <h1 id="design"><span class="animation">Design Page</span></h1>
+            <img class="picture" src="../image/pfp.jpg" alt="pfp.jpg">
+            <h2>MARCUS Hudson Lois</h2>
+            <h2>58614589</h2>
+            <div class="contact">
+                <p id="email"><a href="">&#128231; hlmarcus2-c@my.cityu.edu.hk</a></p>
+                <p id="ig"><a href="">&#128248; @hudson.lm</a></p>
+            </div>
+        </div>
+        <br>
+        <table>
+            <caption>Javascript List</caption>
+            <tr>
+                <th class="main-title">Techniques Description</th>
+                <th class="main-title">Line No.</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="title">General</th>
+            </tr>
+            <tr>
+                <th>Event Handler Type and Method</th>
+                <td>I implemented some in the Javascript <b>element.addEventListener('method','function')</b>. <br>information.js (line 1 => load method, line 38 => ended method) <br>visit.js (line 1=> load method) <br>apply.js (line 1 => load method, line 49 => click method)</td>
+            </tr>
+            <tr>
+                <th>Let and Const</th>
+                <td>Basically let and var are really similar interchangeably. The reason I decided to use <b>let</b> over <b>var</b>, since let limits the variable declaration within its block. Using var can sometimes mistakenly declare two different variables with the same name, then accidentally replaced the old one. On the other hand, const is basically the keyword used to declare a variable that its value cannot be reassigned /  changed to the new one <b>after the first time declared</b>. So, implementing const is also such a good practice to handle such values in a variable when we are sure we are not going to change it overtime and prevent accidentally changing it.
+                <br><b>Let:</b><br>information.js (line 16,21) , visit.js (line 2, 5, 12-14, 35), apply.js (line 2-4, 9, 22, 35, 52, 59-61, 71, 81, 103-104, 132, 153-155, 160-161, 166, 217-218) <br><b>Const:</b> <br>information.js (line 3,8, 20), visit.js (line 18), apply.js (line 6, 138)</td>
+            </tr>
+            <tr>
+                <th>set and map</th>
+                <td>I implemented the usage of <b>new Map()</b>, in apply.js, particularly in order to store the values of <b>each zone and company</b>. Basically, the map function will create the key value pair, as it contains no index. In fact, we are creating our own index, which is <b>key</b>, and we just need to use the <b>list.get()</b> method to get the value. To be honest, it is much similar like <b>dictionary in Python</b>, since I also have that course this semester, so I have learnt about <b>dictionary hashing</b>. <br>
+                apply.js (138-152)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Class</th>
+                <td>On this task, I try to make the object, as Javascript is the OOP language (object-oriented programming). The reason I decided to create the file <b>class_selector.js</b>, because on that file, I created the usage of <b>query Selector, query Selector all, and ID selector</b>, as well as declaring the constructor (line 2), by using the instance <b>this</b>. Furthermore, I also make the if statement inside, to be more efficient if I also wanted to change the CSS style <b>by declaring setAttribute()</b>. Therefore, in the script, I just need to call out the class, e.g. to call the <b>getElementById()</b>=><b>new Selector('...').id()</b>, so it would be much more efficient. <br><br><b>class_selector.js</b></td>
+            </tr>
+            <tr>
+                <td>Additionally, I also use the class of Date (<b>new Date()</b>), then combined with .toString() to update into the current time (as requested)<br><b>new Date().toString()</b><br>apply.js (line 80, 138-139)</td>
+            </tr>
+            <tr>
+                <th colspan="2" class="title">Script Details</th>
+            </tr>
+            <tr>
+                <th>information.js</th>
+                <td>At first, I covered all codes within the addEventListener() method. Afterwards, I made 2 arrays, each for text and videos display, using const keyword. Next, I made the code for the text and video update(marked by comments), such as the index of each message and videos by accessing the element with id and querySelector <b>(calling from the class_selector.js file)</b>. Finally, I used the <b>setInterval(function,time in ms)</b> method, to switch to next message every 3 seconds. In the function to switch messages, I don't use the <b>math.random()</b> method again, because there is still 1/3 chances that I will get the same messages. Therefore, I just ammend the <b>index of text array</b>. Besides that, to trigger the <b>function of changing video</b>, I used the addEventListener('ended',function), where its function is changing the video index and using <b>load()</b> and <b>play()</b> method, to make it works.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">visit.js</th>
+                <td>At first, I also covered all codes within the addEventListener() method. Next, I stated the onclick methods to both submit and reset button, then calling functions. In the submit button function (checkAvail(e)), I enter the parameter <b>e(short for event)</b>, in order to declare <b>e.preventDefault()</b>. This is because once the button is clicked, the window won't get refreshed. In this function, I also called out the id and query selector, followed by <b>setAttribute()</b>, <b>(from class_selector.js)</b>, in order to change the <b>height of fieldset</b> once the error message has been displayed. If there is no error, I am calling <b>reserve</b> function, provided default from CityU, to random the visitors available slot and return true or false.</td>
+            </tr>
+            <tr>
+                <td>For the reset onclick function, it just simply removes the innerHTML of error message and set back the height of fieldset to the beginning.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">apply.js</th>
+                <td>At first, I changed the applypage.html, as I added the ID of every company's input <b>by their initial</b> as well as the table cells'id (<b>first column: zone 1-10 and second column: company 1-10</b>) and table cells' class name (all the same). Actually the table cell's class name is for the clear button, then I implement the <b>querySelectorAll.forEach(element => {element.innerHTML = ''})</b> to remove all contents inside cells. <b>apply.js (line 129)</b></td>
+            </tr>
+            <tr>
+                <td>Additionally, I also implemented the inline script style in each form of the company, by using onsubmit method <br><b>&lt;form action="#" method="get" class="form" onsubmit="event.preventDefault()"&gt;...&lt;/form&gt;</b><br>This is for preventing window to get refreshed after the button clicked, as I have mentioned before. <br>Furthermore, for each button on each form, I also used inline script to call function when clicked, by using onclick method. <br><b>e.g. &lt;button onclick='dataProcess("tws")'&gt;rank of choice&lt;/button&gt;</b></td>
+            </tr>
+        </table>
+        <table>
+            <caption>Table List of Design</caption>
+            <tr>
+                <th class="main-title">Techniques Description</th>
+                <th class="main-title">Line No.</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="title">General</th>
+            </tr>
+            <tr>
+                <th>* (select all)</th>
+                <td>For selecting all, I declared <b>box-sizing: border-box;</b>, which is useful when I set the width of elements and add their margin and padding, the total width remains as specified (line 1-3).</td>
+            </tr>
+            <tr>
+                <th>Background : linear-gradient</th>
+                <td>I applied linear-gradient to <b>every background</b> including heading,body, and footer, but except for nav,tables, and forms. <br>home.css (line 26, 41, 179, 272); about.css (line 16, 30, 223); apply.css(line 17, 32, 359); visit.css (line 17, 32, 52, 271); program.css (line 16, 31, 248); contact.css (line 17, 32, 242); design.css (line 26, 41).</td>
+            </tr>
+            <tr>
+                <th>Looping Effect on the Title</th>
+                <td>At first I declared @keyframes ....[name will be used for calling the animation],<br> I used <b>zoomInOut</b>, and declared the specific inside (line 4-12). Afterwards, on the <b>header h1{}</b>, I call the animation tag, by paying attention to the order (name, duration, pattern, infinite, alternate), where <b>infinite</b> means loop forever, and <b>alternate</b> means forward and reverse (so no blink). <br>home.css (line 48); about.css (line 37); apply.css(line 39); visit.css (line 39); program.css (line 37); contact.css (line 39).</td>
+            </tr>
+
+            <tr>
+                <th rowspan="4">Horizontal NavBar</th>
+                <td>For the <b>ul</b> -> home.css(line 66); about.css(line 61); apply.css(line 57); visit.css (line 71); program.css (line 55); contact.css (line 56), I set the display to <b>flex</b>, and for the <b>li a</b>, set the display to the inline-block (to be able to adjust the size of each list item), <br>home.css(line 134); about.css(line 153); apply.css(line 234); visit.css (line 197); program.css (line 121); contact.css (line 115)</td>
+            </tr>
+            <tr>
+                <td>
+                    As requested, I have implemented pseudo-class Techniques, such as :hover, :active, :visited, home.css (line 141-171); about.css(line 160-190); apply.css(line 241-271); visit.css (line 204-234); program.css (line 128-158); contact.css (line 122-152). However, I modified the <b>:hover</b> with transition by <b>::after</b> (pseudo-element), so once I hover any items, it would give the cyan underline effect, <br>home.css (line 145-158); about.css(line 164-177); apply.css(line 245-258); visit.css (line 208-221); program.css (line 132-145); contact.css (line 126-139).
+                </td>
+            </tr>
+
+            <tr>
+                <td>Position was set to <b>sticky</b>, so when I scrolled down, the navbar will not be dismissed, instead sticked to the top of the website (with top: 0). <br>home.css (line 54); about.css (line 43); apply.css(line 45); visit.css (line 45); program.css (line 43); contact.css (line 45). And I set z-index to 2, just ensure the navbar <b>won't get blocked</b> by any element.</td>
+            </tr>
+
+            <tr>
+                <td><b>!important</b> implementation on hover to <b>priotize</b> the hover animation <b>over :visited tag</b>.</td>
+            </tr>
+
+
+            <tr>
+                <th>:selection</th>
+                <td>When the text is selected, the background will be <b>grey</b>, with opacity <b>0.8</b> and the font color will be <b>white</b>. <br>home.css (line 29-32); about.css (line 19-22); apply.css(line 20-23); visit.css (line 61).</td>
+            </tr>
+
+            <tr>
+                <th>text-align</th>
+                <td><b>Justify</b> has been implemented to all passages.<br>home.css (line 243); about.css (line 74, 124); visit.css (line 45); program.css (line 43); contact.css (line 45)</td>
+            </tr>
+
+            <tr>
+                <th>Responsive</th>
+                <td>I tried to make responsive by using @media(max-width){}/@media(min-width){}, so the position still does look good when opened on the phone, especially for <b>navbar, tables, elements which were set up for floating / inline-block displayed</b>. Here's the detail:<br>
+                home.css (line 62-130); about.css (line 57-149); apply.css (line 52-230); visit.css (line 66-193); program.css (line 50-117); contact.css (line 52-111).
+                </td>
+            </tr>
+
+            <tr>
+                <th>Border Radius</th>
+                <td>The value of border radius will vary depending on my preference, for example: <br>home.css (line 175, 196, 217, 264); about.css (line 93, 120, 194); apply.css (line 52-230); visit.css (line 238, 260); program.css (line 162, 174, 196); contact.css (line 156, 168, 189).</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Clear</th>
+                <td>I implemented the <b>clear</b> tag for <b>both</b> in <b>FOOTER</b>, in order to place it below floating element(s), <br>home.css(line 271); about.css (line 222); apply.css (line 358); visit.css (line 270); program.css (line 247); contact.css (line 241).</td>
+            </tr>
+            <tr>
+                <td>The underline of the link (text-decoration) was set to <b>none</b>, <br>home.css(line 278-280); about.css (line 231-233); apply.css (line 365-367); visit.css (line 279-281); program.css (line 254-256); contact.css (line 249-251).</td>
+            </tr>
+            <tr>
+                <th>Group Style Embedded</th>
+                <td>Some pages were using this technique, such as Home Page (home.css & animatedBackground.css), Apply Page (apply.css & printApply.css), and Visit Page (visit.css & animatedBackground.css).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">Home Page</th>
+            </tr>
+
+            <tr>
+                <th rowspan="3">Animated Background</th>
+                <td>At first, in class <b>.the-welcome-block</b>, I set <b>overflow to hidden</b> and <b>position to relative</b>, <br>home.css(line 183-184), so the animated background will only appear on this div.</td>
+            </tr>
+            <tr>
+                <td>I added 6 extra <b>div.bubble</b> in homepage.html (line 31-36).</td>
+            </tr>
+            <tr>
+                <td>Then I made the second CSS file <b>animatedBackground.css</b>. Set all div(s)'s <b>position to absolute</b> (line 2) and declare another @keyframes (line 12-24). Lastly, each bubble characteristics were determined by pseudo-class <b>nth-child</b> (line 26-70).</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Border Animation</th>
+                <td>An application of transform, <br>home.css (line 203-240)</td>
+            </tr>
+            <tr>
+                <td>In home.css (line 204-208), I used <b>@property --angle</b>, which declared <b>0 degree</b>.</td>
+            </tr>
+            <tr>
+                <td>Afterwards, another usage of pseudo-elements, <b>::after</b> and <b>::before</b>, to make another shape(as if the shadow), but placed below the original one. <br>home.css (line 210-229).</td>
+            </tr>
+            <tr>
+                <th>Multi-column Implementation</th>
+                <td>On this case, I set up the width of container 1 and 2 to <b>50%</b> and <b>float</b> them to the <b>left</b>, home.css (line 72-76, 92-96).</td>
+            </tr>
+            <tr>
+                <th>Hover Animation</th>
+                <td>When I hover the picture <b>CLICK TO APPLY NOW!</b>, it will zoom in, as I transformed it to <b>scale(1.1)</b>, home.css (line 262-268).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">About Page</th>
+            </tr>
+            <tr>
+                <th>font-family</th>
+                <td>For the 5 paragraphs-passage, I changed the font to <b>Gill Sans MT</b> to make it more attractive.</td>
+            </tr>
+            <tr>
+                <th>max-width</th>
+                <td>I set up the <b>max-width </b>for the con-1 and con-2 to <b>80%</b>. <br>about.css (line 81, 94)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Multi-column Implementation</th>
+                <td>For the <b>min-width: 1024px</b>, I set <b>con-1 and con-2 width</b> to <b>48%</b>. <b>Float</b> con-1 to <b>left</b> and con-2 to <b>Right</b>. <br>about.css (line 79-82, 90-95).</td>
+            </tr>
+            <tr>
+                <td>However, for the <b>max-width: 1024px</b> (below 1024px), I didn't implement the multi-column, instead set <b>con-1 and con-2 width</b> back to <b>100%</b>, since when I tried, it looked awful (too small for the table).<br>about.css (line 118-122, 128-132).</td>
+            </tr>
+            <tr>
+                <th>Hover Highlight</th>
+                <td>When I hover any column of <b>td</b>, the background will be changed to brown as if it highlights. <br>about.css (line 217-219).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">Apply Page</th>
+            </tr>
+            <tr>
+                <th rowspan="3">Border Animation</th>
+                <td>An application of transform, apply.css (line 295-332)</td>
+            </tr>
+            <tr>
+                <td>In apply.css (line 296-300), I used <b>@property --angle</b>, which declared <b>0 degree</b>.</td>
+            </tr>
+            <tr>
+                <td>Afterwards, another usage of pseudo-elements, <b>::after</b> and <b>::before</b>, to make another shape(as if the shadow), but placed below the original one. <br>apply.css (line 302-321).</td>
+            </tr>
+            <tr>
+                <th>display: none</th>
+                <td>As requested for the original display, I have to hide the forms and remove the space taken. <br>apply.css (line 392, 398, 404).</td>
+            </tr>
+            <tr>
+                <th>display: block when hovered</th>
+                <td>When the heading is hovered, the background color of heading will be changed to <b>#477580</b>, and the corresponding block (forms classified by each zone) will appear. I used <b>display:block</b>. <br>apply.css (line 408-416, 428-436, 448-456).</td>
+            </tr>
+            <tr>
+                <th>CHALLENGE</th>
+                <td>When the cursor is hovering the corresponding form, the form will still appear and the background color of heading still remain the same which is <b>#477580</b>. For this case, I used the pseudo-class <b>:has(<i>selector</i>)</b>. <br>apply.css (line 418-426, 438-446, 458-466).</td>
+            </tr>
+            <tr>
+                <th>Elements on Each Form</th>
+                <td>I added the border for each image, apply.css(line 484). Then set the <b>display</b> for the <b>image</b> and <b>label</b> to <b>block</b>. While, I made another <b>div.rank</b> for <b>inpput and button</b> with <b>display:inline</b>, <br>apply.css (line 487-489).</td>
+            </tr>
+            <tr>
+                <th>Table's Odd and Even Row</th>
+                <td>With using pseudo-class <b>:nth-child()</b>, where <b>2n+1 for odd</b> and <b>2n for even</b>. This is so I could distinguish each row clearly, <br>apply.css (line 347-352).</td>
+            </tr>
+            <tr>
+                <th>Hover Highlight (each row)</th>
+                <td>With using <b>tr:hover</b>, the background color will be changed to brown, when hovered <br>apply.css (line 353-355).</td>
+            </tr>
+            <tr>
+                <th rowspan="2">"Submit" and "Clear"</th>
+                <td>As requested by the instruction, to set <b>submit</b> and <b>clear</b> to empty links, I changed the tag <b>&lt;button&gt;</b> to <b>&lt;a href=""&gt;</b> in applypage.html (line 176-177)</td>
+            </tr>
+            <tr>
+                <td>Since, it became the empty link, I re-styled them by setting the <b>text-decoration: none</b>, adding border and border-radius, etc. <br>apply.css (line 496-511)</td>
+            </tr>
+            <tr>
+                <th>Print Media</th>
+                <td>Has implemented the group embedded technique <b>printApply.css</b> in the file <b>applypage.html</b>, where I used <b>media: "print"</b>. Afterwards, to hide unnecessary elements when clicking "ctrl+p", I used <b>display:none</b><br>printApply.css (line 23, 27, 31,63).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">Visit Page</th>
+            </tr>
+            <tr>
+                <th rowspan="3">Animated Background</th>
+                <td>At first, in class <b>.the-welcome-block</b>, I set <b>overflow to hidden</b> and <b>position to relative</b>, visit.css(line 57-58), so the animated background will only appear on this div.</td>
+            </tr>
+            <tr>
+                <td>I added 6 extra <b>div.bubble</b> in visitpage.html (line 31-36).</td>
+            </tr>
+            <tr>
+                <td>Then I made the second CSS file <b>animatedBackground.css</b>. Set all div(s)'s <b>position to absolute</b> (line 2) and declare another @keyframes (line 12-24). Lastly, each bubble characteristics were determined by pseudo-class <b>nth-child</b> (line 26-70).</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Multi-column Implementation</th>
+                <td>First, I set the picture's and the location detail's width to <b>45%</b> and <b>50%</b>, respectively, then <b>float</b> them to <b>left</b>. <br> visit.css (line 77-89, 115-121, 125-130, 144-157, 171-176, 183-188) </td>
+            </tr>
+            <tr>
+                <td>However, in order to stay responsive, the smaller device's width is, I made the smaller location's font size is. <br>visit.css (line 88, 103, 120, 129, 156, 175, 187), <br>so they remain the same in the <b>multi-column</b>.</td>
+            </tr>
+            <tr>
+                <th>Box Shadow</th>
+                <td>I implemented box shadow to the <b>location's picture</b> and <b>fieldset</b>, visit.css (line 80, 147, 261).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">Information Page</th>
+            </tr>
+            <tr>
+                <th>Border Animation</th>
+                <td>An application of transform, program.css (line 183-218)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Multi-column Implementation</th>
+                <td>For the <b>description</b> and <b>video</b>, I set their <b>width</b> to <b>49%</b>, and their <b>display: inline-block</b> <br>program.css (line 61-64)</td>
+            </tr>
+            <tr>
+                <td>While when the device's width is below 1024px, I set their width to <b>47%</b> in order to stay responsive. <br>program.css (line 89-93).</td>
+            </tr>
+            <tr>
+                <th>Table's Odd and Even Row</th>
+                <td>With using pseudo-class <b>:nth-child()</b>, where <b>2n+1 for odd</b> and <b>2n for even</b>. This is so I could distinguish each row clearly, <br>program.css (line 236-241).</td>
+            </tr>
+            <tr>
+                <th>Hover Highlight (each row)</th>
+                <td>With using <b>tr:hover</b>, the background color will be changed to brown, when hovered <br>program.css (line 242-244).</td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="title">Contact Page</th>
+            </tr>
+            <tr>
+                <th>Border Animation</th>
+                <td>An application of transform, <br>contact.css (line 176-211)</td>
+            </tr>
+            <tr>
+                <th>Hover Highlight</th>
+                <td>When I hover any column of <b>td</b>, the background will be changed to brown as if it highlights. <br>contact.css (line 236-238).</td>
+            </tr>
+            <tr>
+                <th>cursor: pointer</th>
+                <td>I changed the cursor into pointer when hovering the email part, as if it was a link. <br>contact.css (line 232-234).</td>
+            </tr>
+        </table>
+        <footer>
+            <img src="../image/footer_logo.png" alt="footer_logo.png" height="40" width="260">
+            <p>&copy;CityU 2024 - sources of images and text from Wikipedia Commons and Courtesy of Icon pack by Icons8 -- designed by <a href="designpage.html">MARCUS Hudson Lois</a></p>
+        </footer>
+    </body>
+</html>

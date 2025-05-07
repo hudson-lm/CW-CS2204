@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Hudson Lois">
+        <meta name="description" content="CW-1 CS2204">
+        <title>Apply Page</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/apply.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../CSS/printApply.css" media="print">
+    </head>
+    <body>
+        <header>
+            <img src="../image/logo.png" alt="logo.png" width="334" height="100">
+            <h1>Visionary Innovation Hub</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li id="home"><a href="homepage.html">Home</a></li>
+                <li id="about"><a href="aboutpage.html">About</a></li>
+                <li id="apply"><a href="applypage.html">Apply</a></li>
+                <li id="visit"><a href="visitpage.html">Visit</a></li>
+                <li id="program"><a href="informationpage.html">Information</a></li>
+                <li id="contact"><a href="contactpage.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="the-welcome-block">
+            <h1><span>Welcome to VIH</span></h1>
+        </div>
+
+        <div class="the-apply-block">
+            <h2>Common Choices of Interns</h2>
+            <h3 class="tech" id="tech">Technology Zone</h3>
+            <h3 class="inno" id="inno">Innovation Zone</h3>
+            <h3 class="eco" id="eco">Ecology Zone</h3>
+            <div class="TechnologyZone" id="TechnologyZone">
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/techwave.png" alt="techwave.png" width="200" height="200">
+                    <label for="tws">TechWave Solutions</label>
+                    <div class="rank">
+                        <input type="number" id="tws" name="techwave" max="12">
+                        <button onclick='dataProcess("tws")'>rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/quantum.png" alt="quantum.png" width="200" height="200">
+                    <label for="qlt">Quantum Leap Technologies</label>
+                    <div class="rank">
+                        <input type="number" id="qlt" name="quantum" max="12">
+                        <button onclick="dataProcess('qlt')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/cyberguard.png" alt="cyberguard.png" width="200" height="200">
+                    <label for="cgs">CyberGuard Systems</label>
+                    <div class="rank">
+                        <input type="number" id="cgs" name="cyberguard" max="12">
+                        <button onclick="dataProcess('cgs')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/smartcity.png" alt="smartcity.png" width="200" height="200">
+                    <label for="sci">SmartCity Innovations</label>
+                    <div class="rank">
+                        <input type="number" id="sci" name="smartcity" max="12">
+                        <button onclick="dataProcess('sci')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/connectify.png" alt="connectify.png" width="200" height="200">
+                    <label for="cn">Connectify Networks</label>
+                    <div class="rank">
+                        <input type="number" id="cn" name="connectify" max="12">
+                        <button onclick="dataProcess('cn')">rank of choice</button>
+                    </div>
+                </form>
+            </div>
+            <div class="InnovationZone" id="InnovationZone">
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/ecotech.png" alt="ecotech.png" width="200" height="200">
+                    <label for="etl">EcoTech Labs</label>
+                    <div class="rank">
+                        <input type="number" id="etl" name="ecotech" max="12">
+                        <button onclick="dataProcess('etl')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/healthsphere.png" alt="healthsphere.png" width="200" height="200">
+                    <label for="hsi">HealthSphere Innovations</label>
+                    <div class="rank">
+                        <input type="number" id="hsi" name="healthsphere" max="12">
+                        <button onclick="dataProcess('hsi')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/createch.png" alt="createch.png" width="200" height="200">
+                    <label for="cts">CreaTech Studio</label>
+                    <div class="rank">
+                        <input type="number" id="cts" name="createch" max="12">
+                        <button onclick="dataProcess('cts')">rank of choice</button>
+                    </div>
+                </form>
+            </div>
+            <div class="EcologyZone" id="EcologyZone">
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/greenfuture.png" alt="greenfuture.png" width="200" height="200">
+                    <label for="gfe">GreenFuture Enterprises</label>
+                    <div class="rank">
+                        <input type="number" id="gfe" name="greenfuture" max="12">
+                        <button onclick="dataProcess('gfe')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/waterwise.png" alt="waterwise.png" width="200" height="200">
+                    <label for="wws">WaterWise Solutions</label>
+                    <div class="rank">
+                        <input type="number" id="wws" name="waterwise" max="12">
+                        <button onclick="dataProcess('wws')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/recycle.png" alt="recycle.png" width="200" height="200">
+                    <label for="rci">ReCycle Innovations</label>
+                    <div class="rank">
+                        <input type="number" id="rci" name="recycle" max="12">
+                        <button onclick="dataProcess('rci')">rank of choice</button>
+                    </div>
+                </form>
+                <form action="#" method="get" class="form" onsubmit="event.preventDefault()">
+                    <img src="../image/ecobuild.png" alt="ecobuild.png" width="200" height="200">
+                    <label for="ebt">EcoBuild Technologies</label>
+                    <div class="rank">
+                        <input type="number" id="ebt" name="ecobuild" max="12">
+                        <button onclick="dataProcess('ebt')">rank of choice</button>
+                    </div>
+                </form>
+            </div>  
+        </div>
+
+        <div class="the-resulting-block">
+            <h2>Your chosen companies:</h2>
+            <h3>Last change time: <span id="timeUpdate"></span></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zone</th>
+                        <th id="company">Company</th>
+                        <th class="ranking">Rank</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td id="zone-1" class="cell"></td>
+                        <td id="company-1" class="cell"></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-2" class="cell"></td>
+                        <td id="company-2" class="cell"></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-3" class="cell"></td>
+                        <td id="company-3" class="cell"></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-4" class="cell"></td>
+                        <td id="company-4" class="cell"></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-5" class="cell"></td>
+                        <td id="company-5" class="cell"></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-6" class="cell"></td>
+                        <td id="company-6" class="cell"></td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-7" class="cell"></td>
+                        <td id="company-7" class="cell"></td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-8" class="cell"></td>
+                        <td id="company-8" class="cell"></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-9" class="cell"></td>
+                        <td id="company-9" class="cell"></td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td id="zone-10" class="cell"></td>
+                        <td id="company-10" class="cell"></td>
+                        <td>10</td>
+                    </tr>                     
+                </tbody>
+            </table>
+            <h3>Total Number of Companies Applied: <span id="totalcompanies">0</span></h3>
+            
+            <div class="submit-button">
+                <input type="submit" id="submitButton" value="submit">
+                <input type="reset" id="resetButton" value="clear" onclick="reset()">
+                <p id="error-message"></p>
+            </div>
+        </div>
+        <br>
+        <footer>
+            <img src="../image/footer_logo.png" alt="footer_logo.png" height="40" width="260">
+            <p>&copy;CityU 2024 - sources of images and text from Wikipedia Commons and Courtesy of Icon pack by Icons8 -- designed by <a href="designpage.html">MARCUS Hudson Lois</a></p>
+        </footer>
+
+        <script type="text/javascript" src="../Javascript/apply.js"></script>
+        <script type="text/javascript" src="../Javascript/class_selector.js"></script>
+    </body>
+</html>
