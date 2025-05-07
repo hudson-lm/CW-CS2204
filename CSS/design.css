@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+}
+@keyframes zoomInOut1{
+    from{
+        text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #00ffff;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes zoomInOut2{
+    from{
+        text-shadow: 0px 0px 10px #813ed9, 0px 0px 20px #001aff;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    background:linear-gradient(to top, #e0f7fa, #b2ebf2,#95e9f4,#69e9fa);
+}
+
+::selection{
+    background-color: rgb(135, 134, 134, 0.8);
+    color: white;
+}
+
+header img{
+    width: 30%;
+    height: auto;
+}
+
+header{
+    text-align: center;
+    background:linear-gradient(to right, #00d2ff, #3a7bd5) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 0 3px;
+    font-size: 1.5em;
+}
+
+header h1{
+    animation: zoomInOut1 1s ease-in infinite alternate;
+    color: white;
+}
+
+nav{
+    background-color: black;
+    position:sticky;
+    top: 0;
+    margin: 0;
+    padding:5px 0;
+    z-index: 2;
+}
+
+
+@media(min-width: 1024px){    
+    nav ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        }
+    nav ul li {
+        padding: 10px;
+        font-size:100%;
+        }
+    .picture{
+        width: 20%;
+        border: 5px solid;
+        border-radius: 50%;
+    }
+
+    .the-credit-block > h2{
+        font-size: 2em;
+        font-weight: normal;
+        margin: 10px 10px 0;
+    }
+    .contact a{
+        font-size: 1.5em;
+    }
+
+    th,td{
+        font-size: 1.5em;
+    }
+}
+@media(max-width: 1024px){
+    nav ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        }
+    nav ul li {
+        padding: 5px 7px;
+        font-size: 70%;
+        }
+    .picture{
+        width: 20%;
+        border: 3px solid;
+        border-radius: 50%;
+    }
+
+    .the-credit-block > h2{
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 10px 10px 0;
+    }
+    .contact a{
+        font-size: 1.2em;
+    }
+}
+@media(max-width: 800px){
+    .the-welcome-block #welcome{
+        text-align: center;
+        font-size:1.5em;
+    } 
+
+    .contact a{
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 600px){
+    .the-welcome-block #welcome{
+        text-align: center;
+        font-size:1.2em;
+    }
+
+    .contact a{
+        font-size: 0.8em;
+    }
+
+    th,td{
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 400px){
+    .picture{
+        width: 50%;
+        border: 3px solid;
+        border-radius: 50%;
+    }
+
+    .the-credit-block > h2{
+        font-size: 1.3em;
+        font-weight: normal;
+        margin: 10px 10px 0;
+    }
+
+    th,td{
+        font-size: 0.7em;
+    }
+}
+
+li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 2px;
+    transition: color 0.3s;
+}
+
+li a:hover{
+    cursor: pointer;
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.4s ease-in-out;
+}
+  
+li a:hover::after {
+    width: 100%;
+}
+  
+li a:hover {
+    color: cyan !important;
+  }
+
+li a:active{
+    font-weight: bold;
+    color: cyan;
+}
+
+li a:visited{
+    color: grey;
+}
+
+.the-credit-block{
+    text-align: center;
+}
+
+#design{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+#design>span.animation {
+    border: 1px solid rgb(137, 233, 245);
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    background-color: rgb(137, 233, 245);
+    animation: zoomInOut 1s ease-in infinite alternate;
+}
+
+/* BORDER ANIMATION ==> STARTED*/
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+span.animation::after,span.animation::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    background-color: rgb(37, 150, 190,0.1);
+    z-index: -1;
+    translate: -50% -50%;
+    padding: 4px;
+    background-image: conic-gradient(from var(--angle),transparent 70%, rgb(0, 123, 255));
+    animation: 3s spin linear infinite;
+}
+
+span.animation::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+
+    to{
+        --angle:360deg;
+    }
+}
+/* BORDER ANIMATION ==> ENDED*/
+
+  
+img.picture {
+    transition: 0.4s ease-in-out;
+  }
+.picture:hover {
+    transform: scale(1.1); 
+}
+
+.contact{
+    width: 90%;
+    margin: 0 10px;
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+}
+
+.contact a:active{
+    font-weight: bold;
+}
+
+#email{
+    width: 60%;
+    float: left;
+}
+
+#ig{
+    width: 35%;
+    float: left;
+}
+
+caption{
+    font-size: 2em;
+    text-shadow: 5px 5px 10px rgb(73, 73, 100);
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table{
+    width: 90%;
+    margin: 50px auto;
+}
+
+table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+
+td{
+    padding: 20px;
+}
+
+th{
+    background-color: rgb(162, 86, 86);
+    color: white;
+}
+.main-title{
+    background-color: black;
+    color: white;
+    border: black;
+}
+
+.title{
+    background-color: rgb(48, 44, 44);
+    color: white;
+    border: black;
+}
+
+tbody tr{
+    height: 100px;
+}
+
+tbody tr:nth-child(2n+1){
+    background-color: #fce4ec;
+}
+
+tbody tr:nth-child(2n){
+    background-color: rgb(204, 171, 171);
+}
+
+tbody tr:hover{
+    background-color: rgb(162, 86, 86);
+}
+
+footer{
+    clear: both;
+    background:linear-gradient(to bottom,#bbf0f7, rgb(131, 233, 247),rgb(66, 197, 233));
+    text-align: center;
+    padding: 10px 0 3px;
+    position:relative;
+    top: 10px;
+}
+footer a {
+    text-decoration: none;
+}

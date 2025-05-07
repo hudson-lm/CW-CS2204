@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+}
+
+header img{
+    width: 50%;
+    height: auto;
+}
+
+header{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 0 3px;
+    font-size: 1.5em;
+}
+
+nav{
+    display: none;
+}
+
+.the-welcome-block h1{
+    display: none;
+}
+
+.the-apply-block{
+    display: none;
+}
+
+.the-resulting-block{
+    padding-left: 20px;
+}
+
+table,td,th{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+tr{
+    height: 30px;
+}
+
+td,th{
+    width: 100px;
+}
+#company{
+    width: 300px;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    padding: 10px 0 3px;
+    position:relative;
+    top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}

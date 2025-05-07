@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+@keyframes zoomInOut{
+    from{
+        text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #00ffff;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+body{
+    margin: 0;
+    width: 100%;
+    background:linear-gradient(to top, #e0f7fa, #b2ebf2,#95e9f4,#69e9fa);
+}
+
+::selection{
+    background-color: rgb(135, 134, 134, 0.8);
+    color: white;
+}
+
+header img{
+    width: 30%;
+    height: auto;
+}
+header{
+    text-align: center;
+    background:linear-gradient(to right, #00d2ff, #3a7bd5) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 0 0;
+    font-size: 1.5em;
+}
+
+header h1{
+    animation: zoomInOut 1s ease-in infinite alternate;
+    color: white;
+}
+
+nav{
+    background-color: black;
+    position:sticky;
+    top: 0;
+    margin: 0;
+    padding:5px 0;
+    z-index: 2;
+}
+
+.the-promotional-image-block>img{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 6px;
+}
+
+@media(min-width: 1024px){
+    nav ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+    }
+    nav ul li {
+        padding: 10px;
+        font-size:100%;
+    }
+    .container-1,.container-2{
+        width: 50%;
+        float: left;
+        padding: 10px;
+    }
+
+    .con-1 p {
+        text-align: justify;
+        padding: 0 7px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .con-2{
+        float: right;
+        max-width: 80%; width: 48%;
+    }
+
+    caption{
+        background-color: #000000;
+        color: white;
+        padding: 10px;
+        animation: zoomInOut 1s ease-in infinite alternate
+    }
+    .con-1{
+        float: left;
+        border: 1px solid;
+        border-radius: 5px;
+        max-width: 80%; width: 48%;
+    }
+
+    table{
+        border: 1px solid;
+        border-collapse: collapse;
+        width: 100%;
+    }
+}
+
+@media(max-width: 1024px){
+    nav ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+    }
+    nav ul li {
+        padding: 5px 7px;
+        font-size:70%;
+    }
+    .the-welcome-block #welcome{
+        text-align: center;
+        font-size:40px;
+    }
+    .con-1{
+        border: 1px solid;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .con-1 p {
+        text-align: justify;
+        padding: 0 7px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .con-2{
+        width: 100%;
+        background-color: #9370db;
+        margin-top: 10px;
+    }
+
+    table{
+        border: 1px solid;
+        border-collapse: collapse;
+        background-color: brown;
+        width: 100%;
+    }
+    caption{
+        background-color: #000000;
+        color: white;
+        padding: 10px;
+        animation: zoomInOut 1s ease-in infinite alternate
+    }
+    th,td{
+        font-size: 10px;
+    }
+}
+
+li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 2px;
+    transition: color 0.3s;
+}
+
+li a:hover{
+    cursor: pointer;
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    transition: width 0.4s ease-in-out;
+}
+  
+li a:hover::after {
+    width: 100%;
+}
+  
+li a:hover {
+    color: cyan !important;
+  }
+
+li a:active{
+    font-weight: bold;
+    color: cyan;
+}
+
+li a:visited{
+    color: grey;
+}
+
+li#about{
+    background-color: #333e41;
+    border-radius: 10px;
+}
+
+.container-total{
+    margin: 10px;
+}
+
+caption{
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid;
+}
+
+
+th {
+    background-color: #30e8e8;
+}
+td{
+    background-color: rgb(237, 220, 220);
+    text-align:center;
+}
+.highlight td:hover{
+    background-color: rgb(162, 86, 86);
+}
+
+footer{
+    clear: both;
+    background:linear-gradient(to bottom,#bbf0f7, rgb(131, 233, 247),rgb(66, 197, 233));
+    text-align: center;
+    padding: 10px 0 3px;
+    position:relative;
+    top: 10px;
+    margin-top: 50px;
+}
+
+footer a {
+    text-decoration: none;
+}
